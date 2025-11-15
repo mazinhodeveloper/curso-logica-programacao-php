@@ -16,9 +16,10 @@ https://github.com/mazinhodeveloper/curso-logica-programacao-php
 |--------------------------- | ----------------------------- |   
 | PHP 8.4 ou maior           | https://www.php.net           |   
 | XAMPP                      | https://www.apachefriends.org |   
+| Docker                     | https://www.docker.com        |   
+| Docker PHP 8.4 Apache      | docker run -d -p 80:80 --name apache-php84-app -v "$PWD":/var/www/html php:8.4-apache |   
 
 ### Rodando o Projeto 
 | Diretório             | URL                   |  
 |---------------------- |---------------------- |  
 | Local                 | http://localhost      |      
-
