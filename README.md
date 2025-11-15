@@ -3,13 +3,7 @@ Período: 17/11/2025 a 10/12/2025
 Horário: Segunda, Quarta e Sexta - 08h às 12h    
 https://www.sp.senac.br/cursos-livres/curso-de-logica-de-programacao-direcionada-a-php    
 
-## Objetivo 
-Aprender a interpretar a sintaxe e o formato da linguagem de programação PHP para criar algoritmos e desenvolver aplicações e sistemas computacionais web.    
-
-## Programa 
-Criar algoritmos e desenvolver aplicações e sistemas web com a linguagem de programação PHP.
-
-### Lógica de Programação Direcionada a PHP - 40 horas  
+## Lógica de Programação Direcionada a PHP - 40 horas  
 - Fundamentos da lógica de programação e computacional, conceitos de algoritmos e processamento de dados    
 - Noções de algoritmos por descrição narrativa, fluxograma e pseudocódigo    
 - Manipular diferentes tipos de dados    
@@ -19,6 +13,12 @@ Criar algoritmos e desenvolver aplicações e sistemas web com a linguagem de pr
 - Dominar interfaces de ambientes de desenvolvimento, configurações e compilações    
 - Conduzir e planejar testes de qualidade de software, caixa branca e preta    
 - Fazer versionamento de código: segurança da informação, instalação e configuração    
+
+### Objetivo 
+Aprender a interpretar a sintaxe e o formato da linguagem de programação PHP para criar algoritmos e desenvolver aplicações e sistemas computacionais web.    
+
+### Programa 
+Criar algoritmos e desenvolver aplicações e sistemas web com a linguagem de programação PHP.   
 
 ### Público 
 - Este curso é para quem gosta de tecnologia e tem interesse na área de desenvolvimento de programas e sistemas.    
