@@ -27,4 +27,18 @@ Criar algoritmos e desenvolver aplicações e sistemas web com a linguagem de pr
 - Docente: Celso Luis Caldeira   
 
 ## GitHub / Curso Lógica de Programação Direcionada a PHP 
-https://github.com/mazinhodeveloper/curso-logica-programacao-php  
+https://github.com/mazinhodeveloper/curso-logica-programacao-php   
+
+### Projeto   
+| Requisitos do Projeto      | URL                           |   
+|--------------------------- | ----------------------------- |   
+| PHP 8.4 ou maior           | https://www.php.net           |   
+| XAMPP                      | https://www.apachefriends.org |   
+| Docker                     | https://www.docker.com        |   
+| Docker PHP 8.4 Apache      | docker run -d -p 80:80 --name apache-php84-app -v "$PWD":/var/www/html php:8.4-apache |   
+
+### Rodando o Projeto 
+| Diretório             | URL                   |  
+|---------------------- |---------------------- |  
+| Local                 | http://localhost      |      
+
