@@ -21,10 +21,10 @@ Aprender a interpretar a sintaxe e o formato da linguagem de programação PHP p
 Criar algoritmos e desenvolver aplicações e sistemas web com a linguagem de programação PHP.   
 
 ### Público 
-- Este curso é para quem gosta de tecnologia e tem interesse na área de desenvolvimento de programas e sistemas.    
+Este curso é para quem gosta de tecnologia e tem interesse na área de desenvolvimento de programas e sistemas.    
 
-#### Docente / GitHub 
-- Docente: Celso Luis Caldeira   
+#### Docente  
+Celso Luis Caldeira   
 
 ## GitHub / Curso Lógica de Programação Direcionada a PHP 
 https://github.com/mazinhodeveloper/curso-logica-programacao-php   
