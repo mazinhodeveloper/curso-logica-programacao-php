@@ -7,10 +7,10 @@
     <meta name="author" content="Edmar Inocencio, Mazinho Developer, Mazinho Web" />
     <title>Lógica de Programação Direcionada a PHP</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/starter-template/" />
-    <script src="../assets/js/color-modes.js"></script>
-    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="./assets/js/color-modes.js"></script>
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet" />
     <meta name="theme-color" content="#712cf9" />
-    <link href="../assets/css/styles.css" rel="stylesheet" />
+    <link href="./assets/css/styles.css" rel="stylesheet" />
   </head>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -115,7 +115,7 @@
         <div class="container">
           <div class="col-sm-12 text-center">
             <svg class="bi me-2 bg-white rounded" role="img" width="140" height="108" xmlns="http://www.w3.org/2000/svg" aria-label="Senac">
-              <image href="../assets/images/Edmar-Inocencio.png" x="0" y="0" width="140" alt="Edmar Inocencio" />
+              <image href="./assets/images/Edmar-Inocencio.png" x="0" y="0" width="140" alt="Edmar Inocencio" />
             </svg>
           </div>
         </div>
@@ -217,6 +217,6 @@
       </footer>
     </div>
 
-    <script src="../assets/dist/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+    <script src="./assets/dist/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
   </body>
 </html>
