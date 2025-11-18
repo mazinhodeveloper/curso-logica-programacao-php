@@ -10,3 +10,17 @@ https://www.sp.senac.br/cursos-livres/curso-de-logica-de-programacao-direcionada
 
 ## GitHub / Curso Lógica de Programação Direcionada a PHP 
 https://github.com/mazinhodeveloper/curso-logica-programacao-php   
+
+### Atividades 
+Atividades desenvolvidas em sala de aula.    
+- calcular-peso.php    
+- media-escolar.php    
+- operadores-matematicos.php    
+- strings.php    
+- tabuada-for.php    
+- variaveis.php    
+
+### Material 
+Material adicional utilizado em sala de aula.    
+- php_logica.pptx    
+- php_logica.pdf    
