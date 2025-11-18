@@ -11,7 +11,7 @@
         </div>
         
         <h1>Lógica de Programação Direcionada a PHP - 40 horas</h1> 
-        <p class="mb-4">
+        <p class="mb-4 margin-bottom-0">
           Aprender a interpretar a sintaxe e o formato da linguagem de programação PHP para criar algoritmos e desenvolver aplicações e sistemas computacionais web.
         </p>
         <p class="margin-bottom-0 font-size-14">
@@ -26,6 +26,24 @@
         <p class="mb-4">
           <a href="https://github.com/mazinhodeveloper/curso-logica-programacao-php" target="_blank">https://github.com/mazinhodeveloper/curso-logica-programacao-php</a>
         </p>
+
+        <h3>Atividades</h3> 
+        <p class="mb-4 margin-bottom-0">Atividades desenvolvidas em sala de aula.</p> 
+        <p class="mb-4">
+          - calcular-peso.php<br> 
+          - media-escolar.php<br> 
+          - operadores-matematicos.php<br> 
+          - strings.php<br> 
+          - tabuada-for.php<br>
+          - variaveis.php 
+        </p> 
+
+        <h3>Material</h3> 
+        <p class="mb-4 margin-bottom-0">Material adicional utilizado em sala de aula.</p> 
+        <p class="mb-4">
+          - php_logica.pptx<br> 
+          - php_logica.pdf 
+        </p> 
       </main>
       
   <?php require_once "views/footer.php"; ?>
