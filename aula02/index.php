@@ -29,6 +29,14 @@
 
         <h3>Atividades</h3> 
         <p class="mb-4 margin-bottom-0">Atividades desenvolvidas em sala de aula.</p> 
+        <p class="mb-4">
+          - arrays.php<br> 
+          - atividades.php<br> 
+          - case.php<br> 
+          - estruturas-repeticao.php<br> 
+          - funcoes.php<br>
+          - imc.php 
+        </p> 
       </main>
       
   <?php require_once "views/footer.php"; ?>
