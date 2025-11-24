@@ -32,6 +32,16 @@
         <p class="mb-4">
           -  
         </p> 
+
+        <h4>Utilizades</h4>
+        <p>
+          - https://getbootstrap.com<br>
+          - https://getbootstrap.com/docs/5.3/getting-started/introduction/<br>
+          - https://getbootstrap.com/docs/5.3/components/navbar/<br>
+          - https://getbootstrap.com/docs/5.3/forms/overview/<br>
+          - https://getbootstrap.com/docs/5.3/content/tables/<br>
+          - https://getbootstrap.com/docs/5.3/layout/grid/
+        </p>
       </main>
       
   <?php require_once "views/footer.php"; ?>
