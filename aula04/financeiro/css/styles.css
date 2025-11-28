@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .login-container {
   max-width: 400px;
   padding: 20px;
@@ -12,3 +13,19 @@
   width: 300px;  /* Ajuste do jeito que quiser */ 
   /*height: 100px; /* centraliza verticalmente na tela inteira */
 }
+=======
+.login-container {
+  max-width: 400px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(225, 225, 237, 0);
+}
+
+.centralizado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;  /* Ajuste do jeito que quiser */ 
+  /*height: 100px; /* centraliza verticalmente na tela inteira */
+}
+>>>>>>> a8d0542b7829f62e467f55fa2aa34013dcf8786c
