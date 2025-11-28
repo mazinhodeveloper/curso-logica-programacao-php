@@ -36,8 +36,8 @@ $nome_usuario = $_SESSION['nome_usuario'];
 
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="fornecedores_main.php">Fornecedores</a>
-          <!-- <a class="dropdown-item" href="clientes_main.php">Clientes</a>
-          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="contas_main.php">Plano de Contas</a>
+          <!--<div class="dropdown-divider"></div>
           <a class="dropdown-item" href="tipo_pagamentos_main.php">Tipo Pagamentos</a>
           <a class="dropdown-item" href="forma_pagamentos_main.php">Forma Pagamentos</a>
           <div class="dropdown-divider"></div>

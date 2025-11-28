@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<!-- fornecedores_main.php -->
+<!-- contas_main.php -->
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Fornecedores</title>
+    <title>Cadastro de Plano de contas</title>
       <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css">
       <link href="https://cdn.datatables.net/2.3.5/css/dataTables.bootstrap5.css">
 
     <script>
         // Comantário no Javascript e PHP
 
-function confirmarExclusao(id_fornecedor) {
+function confirmarExclusao(id_conta) {
     var modal = new bootstrap.Modal(document.getElementById('confirmModal'));
     modal.show();
     document.getElementById('confirmDeleteBtn').onclick = function() {
-        window.location.href = "fornecedores_excluir.php?id_fornecedor=" + id_fornecedor;
+        window.location.href = "contas_excluir.php?id_conta=" + id_conta;
     };
 }
 
@@ -29,29 +29,29 @@ function confirmarExclusao(id_fornecedor) {
         include 'menu.php';
     ?>
     <div class="container">
-        <a href="fornecedores_inclusao.php" class="btn btn-primary">Novo Fornecedor</a>
+        <a href="contas_inclusao.php" class="btn btn-primary">Novo Conta</a>
         <br>
-        <table id="table_fornecedor" class="table table-striped">
+        <table id="table_conta" class="table table-striped">
             <thead>
                 <th>ID</th>
-                <th>Nome Fornecedor</th>
+                <th>Nome Conta</th>
                 <th>Editar</th>
                 <th>Excluir</th>
             </thead>
             <tbody>
                 <?php
-                $sql="select id_fornecedor,nome_fornecedor from fornecedores"; // Consulta da tabela fornecedores
+                $sql="select id_conta,descricao_conta from plano_contas"; // Consulta da tabela contas
                 $stmt = $pdo->query($sql); // Executa a consulta usando PDO
                 // laço para trazer os dados da consulta
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                    $id_fornecedor = $row['id_fornecedor'];
-                    $nome_fornecedor = $row['nome_fornecedor'];
+                    $id_conta = $row['id_conta'];
+                    $descricao_conta = $row['descricao_conta'];
                  ?>
                  <tr>
-                    <td><?php echo $id_fornecedor ?></td>
-                    <td><?php echo $nome_fornecedor ?></td>
-                    <td><a href="fornecedores_editar.php?id_fornecedor=<?php echo $id_fornecedor ?>" class="btn btn-secondary">Editar</a></td>
-                    <td><a href="#" onclick="confirmarExclusao(<?php echo htmlspecialchars($id_fornecedor); ?>)" class="btn btn-danger">Excluir</a></td>
+                    <td><?php echo $id_conta ?></td>
+                    <td><?php echo $descricao_conta ?></td>
+                    <td><a href="contas_editar.php?id_conta=<?php echo $id_conta ?>" class="btn btn-secondary">Editar</a></td>
+                    <td><a href="#" onclick="confirmarExclusao(<?php echo htmlspecialchars($id_conta); ?>)" class="btn btn-danger">Excluir</a></td>
                  </tr>
                  <?php
                   }
@@ -72,7 +72,7 @@ function confirmarExclusao(id_fornecedor) {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Tem certeza que deseja excluir este fornecedor?
+        Tem certeza que deseja excluir este conta?
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
@@ -93,7 +93,7 @@ function confirmarExclusao(id_fornecedor) {
 
 <script>
    $(document).ready(function() {
-       $('#table_fornecedor').DataTable();
+       $('#table_conta').DataTable();
    });
 </script>
 
