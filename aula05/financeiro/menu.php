@@ -9,39 +9,54 @@ if (!isset($_SESSION['id_usuario']))  {
 $id_usuario = $_SESSION['id_usuario'];
 $nome_usuario = $_SESSION['nome_usuario'];
 ?> 
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
- 
- <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Financeiro</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Cadastros
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="fornecedores_main.php">Fornecedores</a></li>
-            <li><a class="dropdown-item" href="#">Clientes</a></li>
-            <li><a class="dropdown-item" href="#">Usuários</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Relatório</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Sair do Sistema</a>
-        </li>        
-      </ul>
-    </div>
+ 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brad" href="principal.php">
+  <img src="logo_senac.png" width="200px" alt="">
+  </a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="principal.php">Home <span class="sr-only">(página atual)</span></a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Cadastros
+        </a>
+
+
+
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="fornecedores_main.php">Fornecedores</a>
+          <!-- <a class="dropdown-item" href="clientes_main.php">Clientes</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="tipo_pagamentos_main.php">Tipo Pagamentos</a>
+          <a class="dropdown-item" href="forma_pagamentos_main.php">Forma Pagamentos</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="usuarios_main.php">Usuários</a> -->
+        </div>
+      </li>
+            
+
+      <li class="nav-item">
+        <a class="nav-link" href="logoff.php">Sair do sistema</a>
+      </li>      
+    </ul>
+  
   </div>
+
 </nav>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>   
+
+  
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
