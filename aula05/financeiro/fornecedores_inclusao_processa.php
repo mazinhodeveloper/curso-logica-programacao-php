@@ -13,10 +13,10 @@
     $estado = $_POST['estado'];
     $telefone_fixo = $_POST['telefone_fixo'];
     $celular = $_POST['celular'];
-    $email = $_POST['email'];
+    $email_fornecedor = $_POST['email_fornecedor'];
   
     try {
-        $sql = "INSERT INTO fornecedores (nome_fornecedor, cpf_cnpj, cep, logradouro, numero, complemento, bairro, cidade, estado, telefone_fixo, celular, email_fornecedor) VALUES (:nome_fornecedor, :cpf_cnpj, :cep, :logradouro, :numero, :complemento, :bairro, :cidade, :estado, :telefone_fixo, :celular, :email)";
+        $sql = "INSERT INTO fornecedores (nome_fornecedor, cpf_cnpj, cep, logradouro, numero, complemento, bairro, cidade, estado, telefone_fixo, celular, email_fornecedor) VALUES (:nome_fornecedor, :cpf_cnpj, :cep, :logradouro, :numero, :complemento, :bairro, :cidade, :estado, :telefone_fixo, :celular, :email_fornecedor)";
 
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':nome_fornecedor', $nome_fornecedor);
@@ -30,7 +30,7 @@
         $stmt->bindParam(':estado', $estado);
         $stmt->bindParam(':telefone_fixo', $telefone_fixo);
         $stmt->bindParam(':celular', $celular);
-        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':email_fornecedor', $email_fornecedor);
 
         if ($stmt->execute()) {
             header("location: fornecedores_main.php");

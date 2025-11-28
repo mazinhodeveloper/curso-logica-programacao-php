@@ -36,8 +36,8 @@
                  <tr>
                     <td><?php echo $id_fornecedor ?></td>
                     <td><?php echo $nome_fornecedor ?></td>
-                    <td><a href="" class="btn btn-secondary">Editar</a></td>
-                    <td><a href="" class="btn btn-danger">Excluir</a></td>
+                    <td><a href="fornecedores_editar.php?id_fornecedor=<?php echo $id_fornecedor ?>" class="btn btn-secondary">Editar</a></td>
+                    <td><a href="#" onclick="confirmarExclusao(<?php echo($id_fornecedor) ?>)" class="btn btn-danger">Excluir</a></td>
                  </tr>
                  <?php
                   }

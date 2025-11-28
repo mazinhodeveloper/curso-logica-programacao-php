@@ -3,57 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inclusão de Fornecedores</title>
+    <title>Alteração de Fornecedores</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7z27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <?php 
         include 'menu.php';
+        include 'conexao.php';
+        $id_fornecedor = $_GET['id_fornecedor'];
+        $sql = "SELECT * FROM fornecedores WHERE id_fornecedor = :id_fornecedor";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':id_fornecedor', $id_fornecedor, PDO::PARAM_INT);
+        $stmt->execute();
+        $fornecedor = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($fornecedor) {
+            extract($fornecedor);
+        }        
     ?>
     <div class="container">
-        <h1>Inclusão de Fornecedores</h1>
-        <form action="fornecedores_inclusao_processa.php" method="post">
+        <h1>Alteração de Fornecedores</h1>
+        
+        <form action="fornecedores_editar_processa.php" method="post">
+        <input type="hidden" id="id_fornecedor" name="id_fornecedor" value="<?php echo $id_fornecedor ?>">
         <div class="row">
             <div class="form-group col-sm-4">
                 <label for="" class="form-label">CPF / CNPJ</label> 
-                <input type="text" id="cpf_cnpj" name="cpf_cnpj" class="form-control cpfOuCnpj" placeholder="Entre com o CPF/CNPJ" required>
+                <input type="text" id="cpf_cnpj" name="cpf_cnpj" class="form-control cpfOuCnpj" placeholder="Entre com o CPF/CNPJ" value="<?php echo $cpf_cnpj ?>" required>
 
             </div>
             <div class="form-group col-sm-8">           
                 <label for="" class="form-label">Nome do Fornecedor</label>
-                <input type="text" id="nome_fornecedor" name="nome_fornecedor" class="form-control">
+                <input type="text" id="nome_fornecedor" name="nome_fornecedor" value="<?php echo $nome_fornecedor ?>" class="form-control">
             </div>    
         </div>  
         
         <div class="row">
             <div class="form-group col-sm-4">   
                 <label for="" class="form-label">CEP</label>
-                <input type="text" id="cep" name="cep" class="form-control">
+                <input type="text" id="cep" name="cep" class="form-control" value="<?php echo $cep ?>" >
             </div>
             <div class="form-group col-sm-8">
                 <label for="" class="form-label">Endereço</label>
-                <input type="text" id="logradouro" name="logradouro" class="form-control">
+                <input type="text" id="logradouro" name="logradouro" class="form-control" value="<?php echo $logradouro ?>" >
             </div>
         </div>
         <label for="" class="form-label">Numero</label>
-        <input type="text" id="numero" name="numero" class="form-control">
+        <input type="text" id="numero" name="numero" class="form-control" value="<?php echo $numero ?>" >
         <label for="" class="form-label">Complemento</label>
-        <input type="text" id="complemento" name="complemento" class="form-control">
+        <input type="text" id="complemento" name="complemento" class="form-control" value="<?php echo $complemento ?>" >
         <label for="" class="form-label">Bairro</label>
-        <input type="text" id="bairro" name="bairro" class="form-control">        
+        <input type="text" id="bairro" name="bairro" class="form-control" value="<?php echo $bairro ?>">        
         <label for="" class="form-label">Cidade</label>
-        <input type="text" id="cidade" name="cidade" class="form-control">
+        <input type="text" id="cidade" name="cidade" class="form-control" value="<?php echo $cidade ?>">
         <label for="" class="form-label">Estado</label>
-        <input type="text" id="estado" name="estado" class="form-control">        
+        <input type="text" id="estado" name="estado" class="form-control" value="<?php echo $estado ?>">        
         <label for="">Telefone</label>
-        <input type="text" id="telefone_fixo" name="telefone_fixo" class="form-control">  
-        <label for="" class="form-label">Celular</label>
-        <input type="text" id="celular" name="celular" class="form-control">              
-        <label for="" class="form-label">E-Mail</label>
-        <input type="text" id="email_fornecedor" name="email_fornecedor" class="form-control">        
+        <input type="text" id="telefone_fixo" name="telefone_fixo" class="form-control" value="<?php echo $telefone_fixo ?>">  
 
-        <button type="submit" id="botao" class="btn btn-primary">Incluir</button>
+        <label for="" class="form-label">Celular</label>
+         <input type="text" id="celular" name="celular" class="form-control" value="<?php echo $celular ?>">
+
+        <label for="" class="form-label">E-Mail</label>
+        <input type="text" id="email_fornecedor" name="email_fornecedor" class="form-control" value="<?php echo $email_fornecedor ?>">        
+
+        <button type="submit" id="botao" class="btn btn-primary">Alterar</button>
         <a href="fornecedores_main.php" class="btn btn-secondary">Cancelar</a>
 
         </form>
