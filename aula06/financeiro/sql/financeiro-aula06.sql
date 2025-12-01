@@ -33,7 +33,6 @@ INSERT INTO `fornecedores` (`id_fornecedor`, `nome_fornecedor`, `cpf_cnpj`, `ema
 (5, 'EPSON DO BRASIL INDUSTRIA E COMERCIO LIMITADA', '52.106.911/0001-00', 'sac@epson.com', '(11) 3333-3333', '(11) 77777-7777', '06460020', 'AVENIDA TUCUNARE', '720', 'BLOCO III', 'TAMBORE', 'BARUERI', 'SP');
  
 -- --------------------------------------------------------
- 
 --
 -- Estrutura para tabela `pagamentos`
 --
@@ -53,7 +52,6 @@ CREATE TABLE `pagamentos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
  
 -- --------------------------------------------------------
- 
 --
 -- Estrutura para tabela `plano_contas`
 --
@@ -74,7 +72,6 @@ INSERT INTO `plano_contas` (`id_conta`, `descricao_conta`) VALUES
 (6, 'Despesa com alimentação');
  
 -- --------------------------------------------------------
- 
 --
 -- Estrutura para tabela `usuarios`
 --
@@ -94,9 +91,30 @@ CREATE TABLE `usuarios` (
 INSERT INTO `usuarios` (`id_usuario`, `nome`, `email`, `senha`, `permissao`) VALUES
 (1, 'Celso', 'celso@senac.com.br', '$2y$10$ipmMHCP2x2/gXpdy25KnRua1Of.ErCFK3betYdw8FgVLV66u1XXAi', 0);
  
+-- --------------------------------------------------------
 --
--- Índices para tabelas despejadas
+-- Estrutura para tabela `pagamentos`
 --
+USE financeiro;
+
+CREATE TABLE `pagamentos` (
+	`id_pagamento` int(11) NOT NULL AUTO_INCREMENT,
+    `id_fornecedor` int(11) NOT NULL DEFAULT 0,
+    `id_conta` int(11) NOT NULL DEFAULT 0,
+    `data_vcto` DATE NOT NULL,
+    `valor` FLOAT NOT NULL DEFAULT 0,
+    `valor_pgto` DATE NOT NULL,
+    `valor_pago` FLOAT NOT NULL DEFAULT 0,
+    `descricao` VARCHAR(80) NOT NULL,
+    `oculto` INT(11) NOT NULL DEFAULT 0,
+    `id_usuario` INT(11) NOT NULL DEFAULT 0,
+    `data_exclusao` DATE NOT NULL,
+    PRIMARY KEY (id_pagamento),
+    KEY id_fornecedor (id_fornecedor),
+    KEY id_conta (id_conta),
+    CONSTRAINT id_fornecedor FOREIGN KEY (id_fornecedor) REFERENCES fornecedores (id_fornecedor),
+    CONSTRAINT id_conta FOREIGN KEY (id_conta) REFERENCES plano_contas (id_conta)
+);
  
 --
 -- Índices de tabela `fornecedores`

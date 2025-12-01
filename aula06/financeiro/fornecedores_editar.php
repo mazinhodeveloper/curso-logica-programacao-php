@@ -20,6 +20,7 @@
 
         if ($fornecedor) {
             extract($fornecedor);
+            $cpf_cnpj= $fornecedor['cpf_cnpj'];
         }        
     ?>
     <div class="container">

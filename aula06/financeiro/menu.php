@@ -44,7 +44,10 @@ $nome_usuario = $_SESSION['nome_usuario'];
           <a class="dropdown-item" href="usuarios_main.php">Usuários</a> -->
         </div>
       </li>
-            
+
+      <li class="nav-item">
+        <a class="nav-link" href="pagamentos_main.php">Contas a Pagar</a>
+      </li>           
 
       <li class="nav-item">
         <a class="nav-link" href="logoff.php">Sair do sistema</a>
