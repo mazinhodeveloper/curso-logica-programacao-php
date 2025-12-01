@@ -4,7 +4,7 @@
         <div class="d-flex mb-4 align-items-center font-size-14">
           <div class="vr"></div>
           <p class="ms-2 margin-bottom-0 font-size-14">
-            Aula 05<br>
+            Aula 06<br>
             Docente: Celso Luis Caldeira<br>
             Data: 01/12/2025
           </p>
@@ -36,15 +36,7 @@
         <h4>Utilizades</h4>
         <p>
           - https://getbootstrap.com<br>
-<<<<<<< HEAD
           - https://datatables.net/examples/styling/bootstrap5 
-=======
-          - https://getbootstrap.com/docs/5.3/getting-started/introduction/<br>
-          - https://getbootstrap.com/docs/5.3/components/navbar/<br>
-          - https://getbootstrap.com/docs/5.3/forms/overview/<br>
-          - https://getbootstrap.com/docs/5.3/content/tables/<br>
-          - https://getbootstrap.com/docs/5.3/layout/grid/
->>>>>>> a8d0542b7829f62e467f55fa2aa34013dcf8786c
         </p>
       </main>
       

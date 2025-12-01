@@ -57,9 +57,15 @@ CREATE TABLE `usuarios` (
   `permissao` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- --------------------------------------------------------
+
 --
--- Índices para tabelas despejadas
+-- Estrutura para tabela plano_contas
 --
+CREATE TABLE `plano_contas` (
+  `id_conta` int(11) NOT NULL,
+  `descricao_conta` varchar(60) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Índices de tabela `fornecedores`
