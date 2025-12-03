@@ -7,4 +7,7 @@ https://github.com/mazinhodeveloper/curso-logica-programacao-php
 
 ## Atividades 
 Atividades desenvolvidas em sala de aula.   
-- financeiro
+- financeiro 
+
+### Utilizades
+- https://developers.google.com/chart/interactive/docs/gallery/piechart?hl=pt-br 

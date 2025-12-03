@@ -35,8 +35,7 @@
 
         <h4>Utilizades</h4>
         <p>
-          - https://getbootstrap.com<br>
-          - https://datatables.net/examples/styling/bootstrap5 
+          - https://developers.google.com/chart/interactive/docs/gallery/piechart?hl=pt-br 
         </p>
       </main>
       
