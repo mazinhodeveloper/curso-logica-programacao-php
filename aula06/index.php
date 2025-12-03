@@ -30,7 +30,7 @@
         <h3>Atividades</h3> 
         <p class="mb-4 margin-bottom-0">Atividades desenvolvidas em sala de aula.</p> 
         <p class="mb-4">
-          -  
+          - financeiro    
         </p> 
 
         <h4>Utilizades</h4>
