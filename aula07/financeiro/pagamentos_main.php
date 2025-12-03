@@ -28,47 +28,67 @@ function confirmarExclusao(id_pagamento) {
         include 'conexao.php';
         include 'menu.php';
     ?>
-    <div class="container">
+    <div>
         <a href="pagamentos_inclusao.php" class="btn btn-primary">Novo Pagamento</a>
         <br>
-        <table id="table_conta" class="table table-striped">
-            <thead>
-                <th>ID</th>
-                <th>Nome Fornecedor</th>
-                <th>Data Vencimento</th>
-                <th>Valor</th>
-                <th>Conta</th>
-                <th>Editar</th>
-                <th>Excluir</th>
-            </thead>
-            <tbody>
-                <?php
-                $sql="SELECT p.id_pagamento, p.data_vcto, p.valor, f.nome_fornecedor, c.descricao_conta FROM pagamentos p INNER JOIN fornecedores f ON p.id_fornecedor = f.id_fornecedor INNER JOIN plano_contas c ON p.id_conta = c.id_conta;"; // Consulta da tabela contas
-                $stmt = $pdo->query($sql); // Executa a consulta usando PDO
-                // laço para trazer os dados da consulta
-                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                    $id_pagamento = $row['id_pagamento'];
-                    $data_vcto = $row['data_vcto'];
-                    $valor = $row['valor'];
-                    $nome_fornecedor = $row['nome_fornecedor'];
-                    $descricao_conta = $row['descricao_conta'];
-                 ?>
-                 <tr>
-                    <td><?php echo $id_pagamento ?></td>
-                    <td><?php echo $nome_fornecedor ?></td>
-                    <td><?php echo date("d/m/Y", strtotime($data_vcto)) ?></td>
-                    <td><?php echo "R$ " . number_format($valor,2, ",", ".") ?></td>
-                    <td><?php echo $descricao_conta ?></td>
-                    <td><a href="pagamentos_editar.php?id_pagamento=<?php echo $id_pagamento ?>" class="btn btn-secondary">Editar</a></td>
-                    <td><a href="#" onclick="confirmarExclusao(<?php echo htmlspecialchars($id_pagamento); ?>)" class="btn btn-danger">Excluir</a></td>
-                 </tr>
-                 <?php
-                  }
-                 ?> 
+        <form action="baixa_pagamentos_lote.php" method="post">
+          <table id="table_conta" class="table table-striped">
+              <thead>
+                  <th>ID</th>
+                  <th>Nome Fornecedor</th>
+                  <th>Data Vencimento</th>
+                  <th>Valor</th>
+                  <!-- <th>Data pagamento</th> -->
+                  <th>Valor Pago</th>                
+                  <th>Conta</th>
+                  <th>Editar</th>
+                  <th>Excluir</th>
+                  <th>Baixa</th>
+                  <th>Lote</th>
+              </thead>
+              <tbody>
+                  <?php
+                  $sql="SELECT p.id_pagamento, p.data_vcto, p.valor,p.data_pagto,p.valor_pago, f.nome_fornecedor, c.descricao_conta FROM pagamentos p INNER JOIN fornecedores f ON p.id_fornecedor = f.id_fornecedor INNER JOIN plano_contas c ON p.id_conta = c.id_conta;"; // Consulta da tabela contas
+                  $stmt = $pdo->query($sql); // Executa a consulta usando PDO
+                  // laço para trazer os dados da consulta
+                  $contador = 0;
+                  
+                  while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                      $id_pagamento = $row['id_pagamento'];
+                      $data_vcto = $row['data_vcto'];
+                      $valor = $row['valor'];
+                      $data_pagto = $row['data_pagto'];
+                      $valor_pago = $row['valor_pago'];                    
+                      $nome_fornecedor = $row['nome_fornecedor'];
+                      $descricao_conta = $row['descricao_conta'];
+                      $contador=$contador+1;
+                  ?>
+                  <tr>
+                      <td><?php echo $id_pagamento ?>
+                      <input type="hidden" name="id_pagamento<?php echo $contador; ?>" id="id_pagamento<?php echo $contador; ?>" value="<?php echo $id_pagamento ?>">
 
-            </tbody>
-        </table>
+                      </td>
+                      <td><?php echo $nome_fornecedor ?></td>
+                      <td><?php echo date("d/m/Y", strtotime($data_vcto)) ?></td>
+                      <td><?php echo "R$ " . number_format($valor,2, ",", ".") ?></td>
+                      <!-- <td><?php echo date("d/m/Y", strtotime($data_pagto)) ?></td> -->
+                      <td><?php echo "R$ " . number_format($valor_pago,2, ",", ".") ?></td>                    
+                      <td><?php echo $descricao_conta ?></td>
+                      <td><a href="pagamentos_editar.php?id_pagamento=<?php echo $id_pagamento ?>" class="btn btn-secondary">Editar</a></td>
+                      <td><a href="#" onclick="confirmarExclusao(<?php echo htmlspecialchars($id_pagamento); ?>)" class="btn btn-danger">Excluir</a></td>
+                      <td><a href="baixa_pagamentos.php?id_pagamento=<?php echo $id_pagamento ?>">Baixa</a></td>
+                      <td><input type="checkbox" name="check<?php echo($contador) ?>" id="check<?php echo($contador) ?>" value="1" style="transform: scale(2)"></td>
+                  </tr>
+                  <?php
+                    }
+                  ?> 
 
+              </tbody>
+          </table>
+          <hr>
+          <input type="hidden" id="contador" name="contador" value="<?php echo($contador) ?>">
+          <button type="submit" id="botao_baixa" class="btn btn-primary">Baixar por lote</button>
+        </form>
     </div>
 
 <!-- Modal de Confirmação -->

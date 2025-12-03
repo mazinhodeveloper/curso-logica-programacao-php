@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- pagamentos_inclusao.php --> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inclusão de Pagamentos</title>
@@ -20,7 +19,7 @@
             <select name="id_fornecedor" id="id_fornecedor" class="form-control">
                 <option value="0">-- Selecione o Fornecedor --</option>
                 <!-- Consulta na tabela -->
-                <?php
+                <?php 
                 try {
                 $sql = "select * from fornecedores order by nome_fornecedor";
                 $stmt = $pdo->prepare($sql);
@@ -36,14 +35,14 @@
                 }
                 ?>
             </select>
- 
+
             <!-- Seleção do plano de contas -->
- 
+
             <label for="conta">Conta</label>
             <select name="id_conta" id="id_conta" class="form-control">
                 <option value="0">-- Selecione a Conta --</option>
                 <!-- Consulta na tabela -->
-                <?php
+                <?php 
                 try {
                 $sql = "select * from plano_contas order by descricao_conta";
                 $stmt = $pdo->prepare($sql);
@@ -62,11 +61,11 @@
             <label for="Valor">Valor</label>
             <input type="text" id="valor" name="valor" class="form-control" required>    
             <label for="descricao">Descrição</label>
-            <input type="text" id="descricao" name="descricao" class="form-control">    
- 
+            <input type="text" id="descricao" name="descricao" class="form-control">     
+
             <button type="submit" id="botao" class="btn btn-primary">Incluir</button>
         </form>
     </div>
- 
+
 </body>
 </html>
