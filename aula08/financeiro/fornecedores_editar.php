@@ -31,7 +31,7 @@
         <div class="row">
             <div class="form-group col-sm-4">
                 <label for="" class="form-label">CPF / CNPJ</label> 
-                <input type="text" id="cpf_cnpj" name="cpf_cnpj" class="form-control cpfOuCnpj" placeholder="Entre com o CPF/CNPJ" value="<?php echo $cpf_cnpj ?>" required>
+                <input type="text" id="cpf_cnpj" name="cpf_cnpj" class="form-control" placeholder="Entre com o CPF/CNPJ" value="<?php echo $cpf_cnpj ?>" required>
 
             </div>
             <div class="form-group col-sm-8">           

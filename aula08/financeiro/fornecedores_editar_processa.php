@@ -17,6 +17,7 @@ $email_fornecedor = $_POST['email_fornecedor'];
 try {
     $sql = "UPDATE fornecedores SET 
     nome_fornecedor = :nome_fornecedor,
+    cpf_cnpj = :cpf_cnpj,
     celular = :celular,
     email_fornecedor = :email_fornecedor,
     telefone_fixo =  :telefone_fixo,
@@ -31,6 +32,7 @@ try {
 
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':id_fornecedor', $id_fornecedor, PDO::PARAM_INT);
+        $stmt->bindParam(':cpf_cnpj', $cpf_cnpj);
         $stmt->bindParam(':nome_fornecedor', $nome_fornecedor);
         $stmt->bindParam(':cep', $cep);
         $stmt->bindParam(':logradouro', $logradouro);

@@ -26,11 +26,14 @@ try {
             //Armazenar dados da seção
             $_SESSION['id_usuario'] = $id_usuario;
             $_SESSION['nome_usuario'] = $nome_usuario;
-            // Redireciona para o proncipal.php;
+            // Redireciona para o principal.php;
             header('location:principal.php');
             exit();
         }
+    else {
+         header('location:usuario_recusado.php');
 
+    }
     }
     // Se a senha for invalida ou usuário não encontrado
     // Criar um php chamado usuario_recusado.php
