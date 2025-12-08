@@ -11,6 +11,7 @@
     <?php
         include 'menu.php'; // Inclímos o Menu
         include 'conexao.php'; // Conexão
+
         $id_pagamento = $_GET['id_pagamento'];
         $sql = "SELECT * FROM pagamentos WHERE id_pagamento=:id_pagamento";
         $stmt = $pdo->prepare($sql);
@@ -78,7 +79,8 @@
             <label for="Valor">Valor</label>
             <input type="text" id="valor" name="valor" class="form-control" value="<?php echo $valor; ?>" required>    
             <label for="descricao">Descrição</label>
-            <input type="text" id="descricao" name="descricao" class="form-control" value="<?php echo $descricao; ?>">     
+            <input type="text" id="descricao" name="descricao" class="form-control" value="<?php echo $descricao; ?>">  
+            
 
             <button type="submit" id="botao" class="btn btn-primary">Alterar</button>
         </form>

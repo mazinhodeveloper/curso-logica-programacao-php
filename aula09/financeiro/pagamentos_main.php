@@ -72,7 +72,7 @@
                 <th>Data Vencimento</th>
                 <th>Valor</th>
                 <th>Valor Pago</th>
-                <th>Descrição</th>
+                <th>Conta</th>
                 <th>Editar</th>
                 <th>Excluir</th>
                 <th>Baixa</th>
