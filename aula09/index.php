@@ -4,9 +4,9 @@
         <div class="d-flex mb-4 align-items-center font-size-14">
           <div class="vr"></div>
           <p class="ms-2 margin-bottom-0 font-size-14">
-            Aula 08<br>
+            Aula 09<br>
             Docente: Celso Luis Caldeira<br>
-            Data: 05/12/2025
+            Data: 08/12/2025
           </p>
         </div>
         
