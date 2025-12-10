@@ -10,4 +10,4 @@ Atividades desenvolvidas em sala de aula.
 - financeiro 
 
 ### Utilizades
-- https://developers.google.com/chart/interactive/docs/gallery/piechart?hl=pt-br 
+- https://registro.br 

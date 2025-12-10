@@ -35,7 +35,7 @@
 
         <h4>Utilizades</h4>
         <p>
-          - https://developers.google.com/chart/interactive/docs/gallery/piechart?hl=pt-br 
+          - <a href="https://registro.br" target="_blank">https://registro.br</a> 
         </p>
       </main>
       
